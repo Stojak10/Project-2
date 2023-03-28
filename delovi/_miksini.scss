@@ -1,0 +1,60 @@
+
+/*****************
+mixins
+*****************/
+@mixin fleks($justify, $align: stretch, $direction: row, $wrap: wrap){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin dugme($bg, $text, $hoverBg, $hoverText, $border) {
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: $bg;
+    color: $text;
+    border: 2px solid $border;
+    border-radius: 3px;
+    font-size: 1rem;
+    transition: $transition;
+
+    &:hover {
+        background-color: $hoverBg;
+        color: $hoverText;
+    }
+}
+
+
+
+@mixin dugme2($bg, $text) {
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: $bg;
+    color: $text;
+    border: 2px solid $text;
+    border-radius: 3px;
+    font-size: 1rem;
+    transition: $transition;
+
+    &:hover {
+        background-color: $text;
+        color: $bg;
+    }
+}
+
+
+@mixin devices ($breakpoint){
+    @if $breakpoint == tablet {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == mobilni {
+        @media screen and (max-width: 576px) {
+            @content;
+        }
+    }
+}

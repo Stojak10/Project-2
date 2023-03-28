@@ -1,0 +1,25 @@
+
+
+/*****************
+basic styles
+*****************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    // font-size: $fontSize;
+    font-family: $fontFamily;
+    color: $black;
+}
+
+
+img{
+    width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
